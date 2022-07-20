@@ -29,7 +29,7 @@ const TodoList = () => {
     }
 
     const newItemSection =
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="taskAddArea">
             <label htmlFor="new-todo">Enter a new todo item</label>
             <div className="new-todo">
                 <input
@@ -74,9 +74,11 @@ const TodoList = () => {
 
     return (
         <main>
-            <h1>Todo List</h1>
-            {newItemSection}
-            {content}
+            <h1 className="todoHeader">Todo List</h1>
+            <div className="ListShowArea">
+                {newItemSection}
+                {content}
+            </div>
         </main>
     )
 }
